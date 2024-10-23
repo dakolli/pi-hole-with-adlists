@@ -1,6 +1,6 @@
 # Pi-hole with Custom AdLists
 
-This repository contains a script to set up Pi-hole with custom ad lists.
+This repository contains a script to set up Pi-hole with docker-compose and integrated adlists. 
 
 ## Quick Start
 
