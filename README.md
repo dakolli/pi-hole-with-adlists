@@ -28,6 +28,6 @@ This repository contains a script to set up Pi-hole with custom ad lists.
    - Open a web browser and go to `http://localhost/admin`
    - Enter the password found in the `password.txt` file
 
-That's it! Your Pi-hole with custom ad lists should now be set up and running.
+Your Pi-hole with lists already imported should now be set up and running.
 
 Run `chmod +x cleanup.sh` and `./cleanup.sh` to remove the container and reset the Pi-hole setup if you run into any issues
