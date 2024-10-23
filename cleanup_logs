@@ -1,0 +1,146 @@
+s6-rc: info: service s6rc-oneshot-runner: starting
+s6-rc: info: service s6rc-oneshot-runner successfully started
+s6-rc: info: service fix-attrs: starting
+s6-rc: info: service fix-attrs successfully started
+s6-rc: info: service legacy-cont-init: starting
+s6-rc: info: service legacy-cont-init successfully started
+s6-rc: info: service cron: starting
+s6-rc: info: service cron successfully started
+s6-rc: info: service _uid-gid-changer: starting
+s6-rc: info: service _uid-gid-changer successfully started
+s6-rc: info: service _startup: starting
+ServerIP is deprecated. Converting to FTLCONF_LOCAL_IPV4
+  [i] Starting docker specific checks & setup for docker pihole/pihole
+  [i] Setting capabilities on pihole-FTL where possible
+  [i] Applying the following caps to pihole-FTL:
+        * CAP_CHOWN
+        * CAP_NET_BIND_SERVICE
+        * CAP_NET_RAW
+        * CAP_NET_ADMIN
+        * CAP_SYS_NICE
+  [i] Ensuring basic configuration by re-running select functions from basic-install.sh
+
+  [i] Installing configs from /etc/.pihole...
+  [i] Existing dnsmasq.conf found... it is not a Pi-hole file, leaving alone!
+  [i] Installing /etc/dnsmasq.d/01-pihole.conf...[K  [✓] Installed /etc/dnsmasq.d/01-pihole.conf
+  [i] Installing /etc/.pihole/advanced/06-rfc6761.conf...[K  [✓] Installed /etc/dnsmasq.d/06-rfc6761.conf
+
+  [i] Installing latest logrotate script...
+	[i] Existing logrotate file found. No changes made.
+  [i] Assigning password defined by Environment Variable
+  [✓] New password set
+  [i] Added ENV to php:
+                    "TZ" => "America/Chicago",
+                    "PIHOLE_DOCKER_TAG" => "",
+                    "PHP_ERROR_LOG" => "/var/log/lighttpd/error-pihole.log",
+                    "CORS_HOSTS" => "",
+                    "VIRTUAL_HOST" => "pi.hole",
+  [i] Using IPv4 and IPv6
+
+  [i] Installing latest Cron script...[K  [✓] Installing latest Cron script
+  [i] setup_blocklists now setting default blocklists up: 
+  [i] TIP: Use a docker volume for /etc/pihole/adlists.list if you want to customize for first boot
+  [i] Blocklists (/etc/pihole/adlists.list) now set to:
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  [i] Setting DNS servers based on PIHOLE_DNS_ variable
+  [i] Applying pihole-FTL.conf setting LOCAL_IPV4=0.0.0.0
+  [i] FTL binding to default interface: eth0
+  [i] Enabling Query Logging
+  [i] Testing lighttpd config: Syntax OK
+  [i] All config checks passed, cleared for startup ...
+  [i] Docker start setup complete
+
+  [i] pihole-FTL (no-daemon) will be started as pihole
+
+s6-rc: info: service _startup successfully started
+s6-rc: info: service pihole-FTL: starting
+s6-rc: info: service pihole-FTL successfully started
+s6-rc: info: service lighttpd: starting
+s6-rc: info: service lighttpd successfully started
+s6-rc: info: service _postFTL: starting
+s6-rc: info: service _postFTL successfully started
+s6-rc: info: service legacy-services: starting
+  Checking if custom gravity.db is set in /etc/pihole/pihole-FTL.conf
+s6-rc: info: service legacy-services successfully started
+  [i] Neutrino emissions detected...
+Stopping pihole-FTL
+[K  [✓] Pulling blocklist source list into range
+pihole-FTL: no process found
+
+  [i] Preparing new gravity database...[K  [✓] Preparing new gravity database
+  [i] Creating new gravity databases...[K  [✓] Creating new gravity databases
+  [i] Using libz compression
+
+  [i] Target: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  [i] Status: Pending...[K  [✓] Status: Retrieval successful
+  [✓] Parsed 117701 exact domains and 0 ABP-style domains (ignored 1 non-domain entries)
+      Sample of non-domain entries:
+        - "0.0.0.0"
+
+  [i] List stayed unchanged
+
+  [i] Building tree...[K  [✓] Building tree
+  [i] Swapping databases...[K  [✓] Swapping databases
+  [✓] The old database remains available
+  [i] Number of gravity domains: 117701 (117701 unique domains)
+  [i] Number of exact blacklisted domains: 0
+  [i] Number of regex blacklist filters: 0
+  [i] Number of exact whitelisted domains: 0
+  [i] Number of regex whitelist filters: 0
+  [i] Cleaning up stray matter...[K  [✓] Cleaning up stray matter
+
+  [✗] DNS service is NOT running
+
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+  Pi-hole version is v5.18.3 (Latest: v5.18.3)
+  web version is v5.21 (Latest: v5.21)
+  FTL version is v5.25.2 (Latest: v5.25.2)
+  Container tag is: 2024.07.0
+
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found
+Stopping pihole-FTL
+pihole-FTL: no process found

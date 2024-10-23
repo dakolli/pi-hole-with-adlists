@@ -1,0 +1,5 @@
+#generate gitignore
+password.txt
+/etc-pihole
+/etc-dnsmasq.d
+cleanup.sh
