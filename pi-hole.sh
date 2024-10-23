@@ -85,7 +85,7 @@ done
 
 # Save password
 echo "$PIHOLE_PASSWORD" > ./password.txt
-chmod 600 ./password.txt
+
 
 echo "Pi-hole setup complete!"
 echo "Admin interface: http://localhost/admin"
@@ -123,7 +123,7 @@ expect "Are you finished?"
 send "y\r"
 expect "Update Gravity for immediate effect?"
 send "y\r"
-expect eof
+expect "Bye!"
 EOF
 
 chmod +x setup_lists.exp
@@ -131,4 +131,9 @@ chmod +x setup_lists.exp
 # Run the expect script
 ./setup_lists.exp
 
+# Update gravity manually after the lists are added
+echo "Updating gravity..."
+docker exec pihole pihole -g
+
 echo "Setup complete! Please check the web interface and verify your lists."
+
